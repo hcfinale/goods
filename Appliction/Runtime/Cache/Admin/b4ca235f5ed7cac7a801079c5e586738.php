@@ -1,0 +1,167 @@
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册用户</title>
+    <link type="text/css" rel="stylesheet" href="/Public/assets/css/amazeui.css" />
+</head>
+<body>
+<div class="am-container">
+    <div class="am-g">
+        <div class="am-u-lg-6 am-u-lg-centered">
+            <form class="am-form am-form-horizontal" action="/admin.php/User/add" method="post">
+                <h1 class="am-text-center">普通用户注册</h1>
+                <div class="am-form-group">
+                    <label for="doc-ipt-1" class="am-u-sm-3 am-form-label">用户名</label>
+                    <div class="am-u-sm-8">
+                        <input type="text" name="username" id="doc-ipt-1" placeholder="输入你的用户名">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-pwd-1" class="am-u-sm-3 am-form-label">密码</label>
+                    <div class="am-u-sm-8">
+                        <input type="password" name="password" id="doc-ipt-pwd-1" placeholder="设置一个密码吧">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-pwd-2" class="am-u-sm-3 am-form-label">再次输入</label>
+                    <div class="am-u-sm-8">
+                        <input type="password" name="repassword" id="doc-ipt-pwd-2" placeholder="第二次密码">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-2" class="am-u-sm-3 am-form-label">年龄</label>
+                    <div class="am-u-sm-8">
+                        <input type="text" name="age" maxlength="3" id="doc-ipt-2" placeholder="你的年龄是?">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-3" class="am-u-sm-3 am-form-label">电话</label>
+                    <div class="am-u-sm-8">
+                        <input type="text" name="phone" maxlength="11" id="doc-ipt-3" placeholder="输入你的电话号码">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ta-1" class="am-u-sm-3 am-form-label">联系地址</label>
+                    <div class="am-u-sm-8">
+                        <textarea name="address" rows="5" id="doc-ta-1" placeholder="联系地址"></textarea>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-pwd-2" class="am-u-sm-3 am-form-label">性别</label>
+                    <div class="am-u-sm-8">
+                        <label class="am-radio-inline">
+                            <input type="radio"  value="男" name="sex" checked> 男
+                        </label>
+                        <label class="am-radio-inline">
+                            <input type="radio" value="女" name="sex"> 女
+                        </label>
+                        <label class="am-radio-inline">
+                            <input type="radio" value="保密" name="sex"> 保密
+                        </label>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ta-group" class="am-u-sm-3 am-form-label">用户分组</label>
+                    <div class="am-u-sm-8">
+                        <select class="hc-ajax" id="doc-ta-group" name="group">
+
+                        </select>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ta-box" class="am-form-label am-block am-text-center">权限分配</label>
+                    <div id="doc-ta-box" class="hc-qxian">
+
+                    </div>
+                    <div class="am-g">
+                        <label class="btnCheckAll">全选</label>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <div class="am-u-sm-8 am-u-sm-offset-4">
+                        <button type="submit" class="am-btn am-btn-primary">注册用户</button>
+                        <button type="reset" class="am-btn am-btn-default">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--加载jq文件-->
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/assets/js/amazeui.js"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url:'/admin.php/User/returnAj/',
+            type:"POST",
+            dataType:"json",
+            success: function (data) {
+                if(data){
+                    var user;
+                    $.each(data,function(i,result){
+                        user = "<option value='"+result.id+"'>"+result.title+"</option>" ;
+                        $(".hc-ajax").append(user);
+                    });
+                }else {
+                    alert ("没有获取到数据");
+                }
+            }
+        });
+        $.ajax({
+            url:'/admin.php/User/rulereturn/',
+            type:"POST",
+            dataType:"json",
+            success: function (data) {
+                if(data){
+                    var permissions;
+                    $.each(data,function(i,rudata){
+                        permissions = "<label class='am-checkbox-inline'><input type='checkbox' name='checkbox' value='"+rudata.id+"'>"+rudata.title+"</label>";
+                        $(".hc-qxian").append(permissions);
+                    });
+                }else {
+                    alert ("没有获取到数据");
+                }
+            }
+        });
+
+
+        // 全选
+        $(".btnCheckAll").bind("click", function () {
+            $("[name = checkbox]:checkbox").attr("checked", true);
+        });
+        //删除
+        $(".hc-submit").click(function(){
+            var valArr = new Array;
+            $(".hc-qxian :checkbox[checked]").each(function(i){
+                valArr[i] = $(this).val();
+            });
+            var vals = valArr.join(',');
+            console.log(vals);
+            if(vals!="") {
+                if(confirm("确定要是这些吗？")){
+                    $.ajax({
+                        type:"POST",
+                        url:"<?=U('User/updata/')?>",
+                        data:{'id':vals},
+                        success:function(data){
+                            if(data){
+                                alert('修改成功');
+                                window.location.reload();
+                            }else {
+                                alert('修改失败');
+                            }
+                        }
+                    });
+                }
+            }else {
+                alert ("请给用户权限");
+            }
+        });
+    });
+</script>
+</body>
+</html>

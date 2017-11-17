@@ -1,0 +1,81 @@
+[ 2017-10-27T10:57:06+08:00 ] ::1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\goods\Appliction\home\Controller\IndexController.class.php 第 6 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-27T10:57:08+08:00 ] ::1 /index.php/pay/submit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+ERR: Think\Controller:alipay_jump方法不存在！
+
+[ 2017-10-27T10:57:11+08:00 ] ::1 /index.php/pay/submit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+ERR: Think\Controller:alipay_jump方法不存在！
+
+[ 2017-10-27T10:58:58+08:00 ] ::1 /index.php/pay/submit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+ERR: Think\Controller:alipay_jump方法不存在！
+
+[ 2017-10-27T10:59:02+08:00 ] ::1 /index.php/pay/submit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+NOTIC: [8] Undefined index: debug D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 108 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\ThinkPHP\Library\Think\Db\Driver.class.php 第 113 行.
+ERR: Think\Controller:wechat_jump方法不存在！
+

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册用户</title>
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/assets/css/amazeui.css" />
+</head>
+<body>
+<div class="am-container">
+    <div class="am-g">
+        <div class="am-u-lg-6 am-u-lg-centered">
+            <form class="am-form am-form-horizontal" action="__APP__/User/uprule" method="post">
+                <h1 class="am-text-center">节点修改</h1>
+                <input type="hidden" name="id" value="{$row.id}" />
+                <div class="am-form-group">
+                    <label for="doc-ipt-1" class="am-u-sm-3 am-form-label">节点链接</label>
+                    <div class="am-u-sm-8">
+                        <input type="text" name="name" id="doc-ipt-1" value="{$row.name}">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-pwd-1" class="am-u-sm-3 am-form-label">节点名</label>
+                    <div class="am-u-sm-8">
+                        <input type="text" name="title" id="doc-ipt-pwd-1" value="{$row.title}">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-2" class="am-u-sm-3 am-form-label">type类型</label>
+                    <div class="am-u-sm-8">
+                        <input type="text" name="type" maxlength="3" id="doc-ipt-2" value="{$row.type}" disabled>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label">状态</label>
+                    <div class="am-u-sm-8">
+                        <label class="am-radio-inline">
+                            <input type="radio"  value="1" name="status">开启
+                        </label>
+                        <label class="am-radio-inline">
+                            <input type="radio" value="0" name="status">关闭
+                        </label>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ta-1" class="am-u-sm-3 am-form-label">规则</label>
+                    <div class="am-u-sm-8">
+                        <textarea name="condition" rows="5" id="doc-ta-1" placeholder="默认为空即可"></textarea>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <div class="am-u-sm-8 am-u-sm-offset-4">
+                        <button type="submit" class="am-btn am-btn-primary hc-submit">修改</button>
+                        <button type="reset" class="am-btn am-btn-default">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--加载jq文件-->
+<label class="am-checkbox-inline"><input type="checkbox" value="option1"></label>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/assets/js/amazeui.js"></script>
+</body>
+</html>

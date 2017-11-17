@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台首页</title>
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/assets/css/amazeui.css" />
+    <style>
+        .hc-nav{display: block;width: 80%;margin: 0 auto;}
+        .hc-center{display: block;width: 33.3333%;margin: 0 auto;}
+    </style>
+</head>
+<body>
+<div class="am-container-fluid">
+    <block name="include"><include file="public:header" /></block>
+    <div class="am-block am-padding-top-xl hc-nav">
+        <div class="am-avg-sm-1 hc-center">
+            <volist name="info" id="g">
+                <li class="am-block">
+                    <img class="am-img-thumbnail am-radius" src="{$g.goods_pic}" />
+                    <p class="am-text-center am-margin-xs">{$g.goods_species}</p>
+                    <p class="am-text-center am-margin-xs">{$g.goods_name}</p>
+                    <p class="am-text-center am-margin-xs">{$g.goods_des}</p>
+                    <p class="am-text-center am-margin-xs"><font color="#ff0000" size="5em">特价</font>{$g.goods_price}元</p>
+                </li>
+            </volist>
+            <a class="am-fr" href="#" onclick="javascript :history.back(-1);">返回</a>
+        </div>
+    </div>
+</div>
+<!--加载jq文件-->
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/assets/js/amazeui.js"></script>
+<script>
+    $('.hc-denglu').click(function () {
+        window.location.href = '{:U('Login/login')}';
+    });
+</script>
+</body>
+</html>

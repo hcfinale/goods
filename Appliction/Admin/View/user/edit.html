@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册用户</title>
+    <link type="text/css" rel="stylesheet" href="__PUBLIC__/assets/css/amazeui.css" />
+</head>
+<body>
+<div class="am-container">
+    <div class="am-g">
+        <div class="am-u-lg-6 am-u-lg-centered">
+            <form class="am-form am-form-horizontal" action="__APP__/User/updata" method="post">
+                <h1 class="am-text-center">用户修改</h1>
+                <input type="hidden" value="{$row.id}" />
+                <div class="am-form-group">
+                    <label for="doc-ipt-1" class="am-u-sm-3 am-form-label">用户名</label>
+                    <div class="am-u-sm-8">
+                        <input type="hidden" name="id" value="{$row.id}">
+                        <input type="text" name="username" id="doc-ipt-1" value="{$row.username}" disabled>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-pwd-1" class="am-u-sm-3 am-form-label">密码</label>
+                    <div class="am-u-sm-8">
+                        <input type="password" name="password" id="doc-ipt-pwd-1" placeholder="设置一个密码吧">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-2" class="am-u-sm-3 am-form-label">年龄</label>
+                    <div class="am-u-sm-8">
+                        <input type="text" name="age" maxlength="3" id="doc-ipt-2" placeholder="{$row.age}">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ipt-3" class="am-u-sm-3 am-form-label">电话</label>
+                    <div class="am-u-sm-8">
+                        <input type="text" name="phone" maxlength="11" id="doc-ipt-3" placeholder="{$row.phone}">
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label for="doc-ta-1" class="am-u-sm-3 am-form-label">联系地址</label>
+                    <div class="am-u-sm-8">
+                        <textarea name="address" rows="5" id="doc-ta-1" placeholder="{$row.address}"></textarea>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <label class="am-u-sm-3 am-form-label">性别</label>
+                    <div class="am-u-sm-8">
+                        <label class="am-radio-inline">
+                            <input type="radio"  value="男" name="sex" checked> 男
+                        </label>
+                        <label class="am-radio-inline">
+                            <input type="radio" value="女" name="sex"> 女
+                        </label>
+                        <label class="am-radio-inline">
+                            <input type="radio" value="保密" name="sex"> 保密
+                        </label>
+                    </div>
+                </div>
+                <div class="am-form-group">
+                    <div class="am-u-sm-8 am-u-sm-offset-4">
+                        <button type="submit" class="am-btn am-btn-primary hc-submit">修改</button>
+                        <button type="reset" class="am-btn am-btn-default">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--加载jq文件-->
+<label class="am-checkbox-inline"><input type="checkbox" value="option1"></label>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/assets/js/amazeui.js"></script>
+</body>
+</html>
